@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while true; do
+    counting=$(pgrep -c -f "monitoringTask.sh")
+
+    if [ $counting -lt 1 ]; then
+        echo "Target Script is currently not running. Starting it..."
+        cd ~
+        sh monitoringTask.sh &
+    fi
+
+    echo "Sleeping for 3 seconds"
+    sleep 3
+done
