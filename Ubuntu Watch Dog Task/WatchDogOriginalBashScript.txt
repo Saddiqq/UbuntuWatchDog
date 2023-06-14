@@ -1,0 +1,16 @@
+#!/bin/bash
+
+num1=5
+num2=6
+
+if [ $num1 -gt 1 ]; then
+    echo "${num1} is greater than 1"
+else
+    echo "${num1} is NOT greater than 1"
+fi
+
+echo "Sleeping"
+
+sleep 3000000
+
+echo "Exiting"
