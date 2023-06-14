@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true; do
+    if ! pgrep -x "bash watch_script.sh" >/dev/null; then
+        echo "Process is not running. Starting it..."
+        bash watch_script.sh &
+    fi
+    sleep 1
+done
